@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!--SVG SPRITES-->
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-twitter" viewBox="0 0 36 32">
+          <path
+            d="M35.556 4.976c-1.222 0.548-2.64 0.952-4.125 1.142l-0.076 0.008c1.511-0.907 2.646-2.309 3.193-3.977l0.015-0.051c-1.331 0.803-2.879 1.415-4.529 1.748l-0.093 0.016c-1.333-1.421-3.223-2.306-5.319-2.306-4.025 0-7.287 3.263-7.287 7.287 0 0.001 0 0.003 0 0.004v-0c0 0.578 0.048 1.134 0.169 1.662-6.060-0.295-11.422-3.2-15.024-7.623-0.627 1.055-0.999 2.324-1.003 3.681v0.001c0 2.524 1.301 4.763 3.237 6.059-1.212-0.033-2.341-0.361-3.327-0.915l0.036 0.019v0.080c0.005 3.515 2.486 6.449 5.792 7.152l0.048 0.009c-0.556 0.153-1.195 0.24-1.854 0.24-0.020 0-0.040-0-0.061-0l0.003 0c-0.466 0-0.937-0.027-1.38-0.124 0.944 2.887 3.623 5.010 6.811 5.077-2.461 1.94-5.606 3.111-9.025 3.111-0.005 0-0.009 0-0.014 0h0.001c-0.020 0-0.045 0-0.069 0-0.59 0-1.172-0.038-1.743-0.11l0.068 0.007c3.14 2.051 6.986 3.271 11.116 3.271 0.023 0 0.047-0 0.070-0h-0.004c13.413 0 20.747-11.111 20.747-20.743 0-0.32-0.011-0.633-0.027-0.942 1.443-1.040 2.656-2.293 3.62-3.727l0.033-0.052z">
+          </path>
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 32 32">
+          <path
+            d="M21.329 5.313h2.921v-5.088c-0.504-0.069-2.237-0.225-4.256-0.225-4.212 0-7.097 2.649-7.097 7.519v4.481h-4.648v5.688h4.648v14.312h5.699v-14.311h4.46l0.708-5.688h-5.169v-3.919c0.001-1.644 0.444-2.769 2.735-2.769z">
+          </path>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 32 32">
+          <path
+            d="M31.969 9.408c-0.075-1.7-0.35-2.869-0.744-3.882-0.406-1.075-1.032-2.038-1.851-2.838-0.8-0.813-1.769-1.444-2.832-1.844-1.019-0.394-2.182-0.669-3.882-0.744-1.713-0.081-2.257-0.1-6.601-0.1s-4.888 0.019-6.595 0.094c-1.7 0.075-2.869 0.35-3.882 0.744-1.075 0.406-2.038 1.031-2.838 1.85-0.813 0.8-1.444 1.769-1.844 2.832-0.394 1.019-0.669 2.182-0.744 3.882-0.081 1.713-0.1 2.257-0.1 6.601s0.019 4.888 0.094 6.595c0.075 1.7 0.35 2.869 0.744 3.882 0.406 1.075 1.038 2.038 1.85 2.838 0.8 0.813 1.769 1.444 2.832 1.844 1.019 0.394 2.182 0.669 3.882 0.744 1.706 0.075 2.25 0.094 6.595 0.094s4.888-0.019 6.595-0.094c1.7-0.075 2.869-0.35 3.882-0.744 2.151-0.832 3.851-2.532 4.682-4.682 0.394-1.019 0.669-2.182 0.744-3.882 0.075-1.707 0.094-2.251 0.094-6.595s-0.006-4.888-0.081-6.595zM29.087 22.473c-0.069 1.563-0.331 2.407-0.55 2.969-0.538 1.394-1.644 2.5-3.038 3.038-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.464 0.094s-4.782-0.019-6.464-0.094c-1.563-0.069-2.407-0.331-2.969-0.55-0.694-0.256-1.325-0.663-1.838-1.194-0.531-0.519-0.938-1.144-1.194-1.838-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.464s0.019-4.782 0.094-6.464c0.069-1.563 0.331-2.407 0.55-2.969 0.256-0.694 0.663-1.325 1.2-1.838 0.519-0.531 1.144-0.938 1.838-1.194 0.563-0.219 1.413-0.481 2.969-0.55 1.688-0.075 2.194-0.094 6.464-0.094 4.276 0 4.782 0.019 6.464 0.094 1.563 0.069 2.407 0.331 2.969 0.55 0.694 0.256 1.325 0.662 1.838 1.194 0.531 0.519 0.938 1.144 1.194 1.838 0.219 0.563 0.481 1.413 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.464s-0.019 4.77-0.094 6.458z">
+          </path>
+          <path
+            d="M16.059 7.783c-4.538 0-8.22 3.682-8.22 8.22s3.682 8.22 8.22 8.22c4.539 0 8.22-3.682 8.22-8.22s-3.682-8.22-8.22-8.22zM16.059 21.335c-2.944 0-5.332-2.388-5.332-5.332s2.388-5.332 5.332-5.332c2.944 0 5.332 2.388 5.332 5.332s-2.388 5.332-5.332 5.332z">
+          </path>
+          <path
+            d="M26.524 7.458c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+          </path>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 32 32">
+          <path
+            d="M31.992 32v-0.001h0.008v-11.736c0-5.741-1.236-10.164-7.948-10.164-3.227 0-5.392 1.771-6.276 3.449h-0.093v-2.913h-6.364v21.364h6.627v-10.579c0-2.785 0.528-5.479 3.977-5.479 3.399 0 3.449 3.179 3.449 5.657v10.401h6.62z">
+          </path>
+          <path d="M0.528 10.636h6.635v21.364h-6.635v-21.364z"></path>
+          <path
+            d="M3.843 0c-2.121 0-3.843 1.721-3.843 3.843s1.721 3.879 3.843 3.879c2.121 0 3.843-1.757 3.843-3.879-0.001-2.121-1.723-3.843-3.843-3.843v0z">
+          </path>
+        </symbol>
+      </defs>
+    </svg>
+    <!--Шапка-сайту-->
+    <header class="page-header">
+      <div class="container header-container">
+        <a href="./index.html" class="logo"><span class="blck">Web</span><span>Studio</span></a>
+        <nav class="site-nav">
+          <ul class="site-nav list">
+            <li class="item">
+              <a href="./index.html" class="link">Студія</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link current">Портфоліо</a>
+            </li>
+            <li class="item">
+              <a href="./index.html" class="link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header-contact-list list">
+          <li class="header-contact-item">
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="mail-icon">
+              <path class="mail"
+                d="M14.5 0h-13C.673 0 0 .673 0 1.5v9c0 .827.673 1.5 1.5 1.5h13c.827 0 1.5-.673 1.5-1.5v-9c0-.827-.673-1.5-1.5-1.5Zm0 1c.068 0 .133.014.192.039L8 6.839l-6.692-5.8A.498.498 0 0 1 1.5 1h13Zm0 10h-13a.5.5 0 0 1-.5-.5V2.095l6.672 5.783a.5.5 0 0 0 .656 0L15 2.095V10.5a.5.5 0 0 1-.5.5Z"
+                fill="#757575" />
+            </svg>
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="header-contact-item">
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-icon">
+              <path class="phone"
+                d="M8.5 0h-7C.673 0 0 .673 0 1.5v13c0 .827.673 1.5 1.5 1.5h7c.827 0 1.5-.673 1.5-1.5v-13C10 .673 9.327 0 8.5 0Zm-7 1h7a.5.5 0 0 1 .5.5V12H1V1.5a.5.5 0 0 1 .5-.5Zm7 14h-7a.5.5 0 0 1-.5-.5V13h8v1.5a.5.5 0 0 1-.5.5Z"
+                fill="#757575" />
+              <path d="M2.354 13.739a.445.445 0 0 1 0 .66.525.525 0 0 1-.708 0 .445.445 0 0 1 0-.66.525.525 0 0 1 .708 0Z"
+                fill="#757575" />
+            </svg>
+            <a href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!--Портфоліо-->
+    <main>
+      <h1 class="visually-hidden">Портфоліо</h1>
+      <section class="section">
+        <div class="container">
+          <ul class="list btn-portfolio">
+            <li><button class="secondary" type="button">Усі</button></li>
+            <li><button class="secondary" type="button">Веб-сайти</button></li>
+            <li><button class="secondary" type="button">Додатки</button></li>
+            <li><button class="secondary" type="button">Дизайн</button></li>
+            <li><button class="secondary" type="button">Маркетинг</button></li>
+          </ul>
+          <ul class="list portfolio-list">
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-1.jpg" alt="портфоліо-1" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Технокряк</h2>
+                  <p class="text">Веб-дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-2.jpg" alt="портфоліо-2" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
+                  <p class="text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-3.jpg" alt="портфоліо-3" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Ресторан Seafood</h2>
+                  <p class="text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-4.jpg" alt="портфоліо-4" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Проєкт Prime</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-5.jpg" alt="портфоліо-5" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Проєкт Boxes</h2>
+                  <p class="text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-6.jpg" alt="портфоліо-6" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Inspiration has no Borders</h2>
+                  <p class="text">Веб-дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-7.jpg" alt="портфоліо-7" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Видання Limited Edition</h2>
+                  <p class="text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./images/портфоліо-8.jpg" alt="портфоліо-8" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Проєкт LAB</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
+              </a>
+              
+            </li>
+            <li class="item">
+              <a href=""><img src="./images/портфоліо-9.jpg" alt="портфоліо-9" width="370" height="294" />
+                <div class="portfolio-element">
+                  <h2 class="title">Growing Business</h2>
+                  <p class="text">Додаток</p>
+                </div>
+              </a>
+              
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!--Підвал-сайту-->
+    <footer class="footer">
+      <div class="container">
+        <a href="./index.html" class="footer-logo"><span>Web</span><span class="wht">Studio</span></a>
+        <address class="footer-adress">
+          <ul class="footer-list list">
+            <li class="footer-item">
+              <a href="https://goo.gl/maps/UaeHGTFbajZYQoQx9" target="_blank" rel="nofollow noopener noreferrer">
+                м. Київ, пр-т Лесі Українки, 26
+              </a>
+            </li>
+    
+            <li class="footer-contact">
+              <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+    
+            <li class="footer-contact">
+              <a href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </address>
+    
+        <div class="footer-smm">
+          <h2 class="footer-smm-title">Приєднуйтесь</h2>
+          <ul class="footer-smm-list list">
+            <li class="footer-bgc-icon">
+              <a class="smm-link" href="">
+                <svg class="footer-icon">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="footer-bgc-icon">
+              <a class="smm-link" href="">
+                <svg class="footer-icon">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="footer-bgc-icon">
+              <a class="smm-link" href="">
+                <svg class="footer-icon">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="footer-bgc-icon">
+              <a class="smm-link" href="">
+                <svg class="footer-icon">
+                  <use xlink:href="#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </footer>
+  </body>
+</html>

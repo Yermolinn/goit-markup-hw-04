@@ -620,7 +620,7 @@ background-position: 50% 50%;
 
 .team-list {
   display: flex;
-  background-color: var(--white-bgc-collor);
+  background-color: var(--sec-bgc-color);
 }
 
 .team-list > .item {
@@ -634,6 +634,7 @@ background-position: 50% 50%;
 .team-list > .item:not(:first-child) {
   margin-left: 30px;
 }
+
 
 .team-list-element {
   padding-top: 30px;

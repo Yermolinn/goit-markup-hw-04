@@ -102,12 +102,13 @@ button {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../images/герой.jpg);
+  background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4) )
+  ,url(../images/герой.jpg);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.container-fluid
 
 /* svg img  url()
 background-image: url('адреса зображення')
@@ -732,6 +733,7 @@ background-position: 50% 50%;
   background-color: var(--white-bgc-collor);
   justify-content: center;
   align-items: center;
+  container-fluid
 }
 
 .clients-icon {

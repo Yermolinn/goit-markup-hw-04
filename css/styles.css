@@ -102,13 +102,12 @@ button {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4) )
-  ,url(../images/герой.jpg);
-  background-size: contain;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 /* svg img  url()
 background-image: url('адреса зображення')
@@ -140,6 +139,11 @@ background-position: 50% 50%;
 }
 
 /* ------------------------------------------------Шапка------------------------------------------------ */
+.logo-header {
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
 .page-header {
   border-bottom: 1px solid var(--high-line-collor);
 }
@@ -171,18 +175,25 @@ background-position: 50% 50%;
   color: var(--accent-text-collor);
 }
 
-.header-contact-item {
-  display: flex;
+.header-mail-item:hover .mail-icon,
+.header-mail-item:focus .mail-icon {
+  fill: var(--accent-btn-collor);
 }
 
-.header-contact-item:last-child {
+.header-phone-item {
+  display: flex;
   margin-left: 50px;
+}
+
+.header-mail-item {
+  display: flex;
 }
 
 .mail-icon {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  fill: var(--secondary-text-collor);
 }
 
 .mail-icon .mail:hover {
@@ -193,10 +204,12 @@ background-position: 50% 50%;
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  fill: var(--secondary-text-collor);
 }
 
-.phone-icon .phone:hover {
-  fill: currentColor;
+.header-phone-item:hover .phone-icon,
+.header-phone-item:focus .phone-icon {
+  fill: var(--accent-btn-collor);
 }
 
 /* .mail {
@@ -218,32 +231,6 @@ background-position: 50% 50%;
 } */
 
 /* ------------------------------------------------Лого------------------------------------------------ */
-.logo {
-  display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 25px;
-
-  text-decoration: none;
-  font-family: 'Raleway';
-  font-size: 26px;
-  line-height: 1.2;
-  /* identical to box height */
-
-  color: #2196f3;
-}
-
-.logo:hover,
-.logo:focus {
-  color: var(--accent-text-collor);
-}
-
-.wht {
-  color: var(--white-text-collor);
-}
-
-.blck {
-  color: var(--black-text-collor);
-}
 
 /* ------------------------------------------------Навігація-сайту------------------------------------------------ */
 
@@ -326,42 +313,16 @@ background-position: 50% 50%;
 
 .logo-icon {
   width: 145px;
+  height: 31px;
 }
 
 .footer-logo {
-  display: block;
-  /* margin-top: 60px; */
-
-  text-decoration: none;
-  font-family: 'Raleway';
-  font-size: 26px;
-  line-height: 1.2;
-  /* identical to box height */
-  color: #2196f3;
-}
-
-.footer-logo:hover,
-.footer-logo:focus {
-  color: var(--accent-text-collor);
-}
-
-.wht {
-  color: var(--white-text-collor);
-}
-
-.blck {
-  color: var(--black-text-collor);
+  display: flex;
 }
 
 .footer-adress {
   display: inline-block;
   margin-top: 20px;
-}
-
-.footer-smm {
-  display: inline-block;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .footer-smm-title {
@@ -393,6 +354,15 @@ background-position: 50% 50%;
   height: 20px;
   width: 20px;
   fill: var(--white-text-collor);
+}
+
+.footer-first-box {
+  margin-right: 70px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 /* ------------------------------------------------Кнопки------------------------------------------------ */
@@ -468,6 +438,8 @@ background-position: 50% 50%;
   cursor: pointer;
   color: var(--white-text-collor);
   background: var(--accent-btn-collor);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .secondary.current {
@@ -495,6 +467,7 @@ background-position: 50% 50%;
 
 .page-hero {
   background-color: var(--footer-bgc-collor);
+  padding: 200px 0;
 }
 
 .hero-container {
@@ -514,7 +487,6 @@ background-position: 50% 50%;
   color: var(--white-text-collor);
   width: 696px;
   margin: 0 auto;
-  padding-top: 200px;
 }
 
 /* ------------------------------------------------Переваги------------------------------------------------ */
@@ -527,8 +499,8 @@ background-position: 50% 50%;
   display: inline-block;
 }
 
-.feat-list > .item:not(:first-child) {
-  margin-left: 30px;
+.feat-list > .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .feat-list > .item p {
@@ -553,22 +525,21 @@ background-position: 50% 50%;
   color: var(--secondary-text-collor);
 }
 
-.feat-icon-container {
+.feat-icon-list {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
 }
 
 .feat-icon {
+  margin-bottom: 30px;
   height: 120px;
   width: 270px;
   padding: 25px 100px;
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
   background-color: var(--sec-bgc-color);
 }
 
+.feat-icon:not(:last-child) {
+  margin-right: 30px;
+}
 /* --------------------------------------------Чим-займаємося-------------------------------------------- */
 .page-production {
   padding-top: 0;
@@ -636,7 +607,6 @@ background-position: 50% 50%;
   margin-left: 30px;
 }
 
-
 .team-list-element {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -665,32 +635,21 @@ background-position: 50% 50%;
   color: var(--secondary-text-collor);
 }
 
+.team-smm-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
 .icon {
   height: 20px;
   width: 20px;
-  fill: var(--secondary-text-collor);
+  fill: var(--icon-normal-color);
 }
 .icon:hover,
 .icon:focus {
   fill: var(--white-text-collor);
-}
-
-.bgc-icon {
-  display: inline-flex;
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
-  background-color: var(--white-bgc-collor);
-}
-
-.smm-link:hover,
-.smm-link:focus {
-  background-color: var(--accent-btn-collor);
-}
-
-.smm-link:hover .icon,
-.smm-link:focus .icon {
-  fill: var(--conteiner-bgc-collor);
 }
 
 .smm-link {
@@ -700,45 +659,57 @@ background-position: 50% 50%;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  color: var(--icon-normal-color);
 }
 
-.team-smm-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
+.smm-link:hover,
+.smm-link:focus {
+  background-color: var(--accent-btn-collor);
+  color: var(--white-bgc-collor);
+}
+
+.smm-link:hover .icon,
+.smm-link:focus .icon {
+  fill: var(--conteiner-bgc-collor);
 }
 
 /* ----------------------Постійні клієнти---------------------- */
 .clients-title {
   margin-bottom: 50px;
-
   width: calc(100% - 150px / 6);
 }
 
 .clients-list {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   gap: 30px;
 }
 
-.clients .clients-link {
+.clients-link {
   display: flex;
-}
-
-.clients-bgc {
-  padding: 16px 32px;
-  border: 1px solid rgba(175, 177, 184, 1);
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-normal-color);
   border-radius: 4px;
-  background-color: var(--white-bgc-collor);
   justify-content: center;
   align-items: center;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-btn-collor);
+  color: var(--accent-btn-collor);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-btn-collor);
 }
 
 .clients-icon {
   width: 106px;
   height: 60px;
-  fill: var(--secondary-text-collor);
+  margin: 16px 27px;
+  fill: var(--icon-normal-color);
 }
 .clients-icon:hover,
 .clients-icon:focus {
@@ -796,7 +767,8 @@ background-position: 50% 50%;
   text-decoration: none;
 }
 
-.portfolio-list > .item:hover {
+.item:hover,
+.item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }

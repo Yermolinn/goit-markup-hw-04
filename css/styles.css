@@ -159,6 +159,7 @@ background-position: 50% 50%;
 }
 
 .header-contact-list a {
+  display: flex;
   color: var(--secondary-text-collor);
   text-decoration: none;
 
@@ -175,10 +176,6 @@ background-position: 50% 50%;
   color: var(--accent-text-collor);
 }
 
-.header-mail-item:hover .mail-icon,
-.header-mail-item:focus .mail-icon {
-  fill: var(--accent-btn-collor);
-}
 
 .header-phone-item {
   display: flex;
@@ -193,7 +190,7 @@ background-position: 50% 50%;
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: var(--secondary-text-collor);
+fill: currentColor;
 }
 
 .mail-icon .mail:hover {
@@ -204,7 +201,7 @@ background-position: 50% 50%;
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: var(--secondary-text-collor);
+  fill: currentColor
 }
 
 .header-phone-item:hover .phone-icon,
@@ -231,6 +228,47 @@ background-position: 50% 50%;
 } */
 
 /* ------------------------------------------------Лого------------------------------------------------ */
+.logo {
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-size: 26px;
+  line-height: 1.2;
+  /* identical to box height */
+
+  color: #2196f3;
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--accent-text-collor);
+}
+
+.wht {
+  color: var(--white-text-collor);
+}
+
+.blck {
+  color: var(--black-text-collor);
+}
+
+.footer-logo {
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-size: 26px;
+  line-height: 1.2;
+  /* identical to box height */
+
+  color: #2196f3;
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+  color: var(--accent-text-collor);
+}
 
 /* ------------------------------------------------Навігація-сайту------------------------------------------------ */
 
@@ -326,7 +364,7 @@ background-position: 50% 50%;
 }
 
 .footer-smm-title {
-  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -340,6 +378,7 @@ background-position: 50% 50%;
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .footer-bgc-icon {
@@ -358,6 +397,11 @@ background-position: 50% 50%;
 
 .footer-first-box {
   margin-right: 70px;
+}
+
+.footer-smm-box {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer .container {
@@ -539,17 +583,21 @@ background-position: 50% 50%;
   display: flex;
 }
 
-.feat-icon {
-  margin-bottom: 30px;
-  height: 120px;
+.feat-icon-box {
+  display: flex;
+margin-bottom: 30px;
   width: 270px;
-  padding: 25px 100px;
+  height: 120px;
+ align-items: center;
+ justify-content: center;
   background-color: var(--sec-bgc-color);
 }
 
-.feat-icon:not(:last-child) {
-  margin-right: 30px;
+.feat-icon {
+height: 70px;
+  width: 70px;
 }
+
 /* --------------------------------------------Чим-займаємося-------------------------------------------- */
 .page-production {
   padding-top: 0;
@@ -655,7 +703,7 @@ background-position: 50% 50%;
 .icon {
   height: 20px;
   width: 20px;
-  fill: var(--icon-normal-color);
+  fill: currentColor;
 }
 .icon:hover,
 .icon:focus {
@@ -678,10 +726,6 @@ background-position: 50% 50%;
   color: var(--white-bgc-collor);
 }
 
-.smm-link:hover .icon,
-.smm-link:focus .icon {
-  fill: var(--conteiner-bgc-collor);
-}
 
 /* ----------------------Постійні клієнти---------------------- */
 .clients-title {
@@ -702,6 +746,7 @@ background-position: 50% 50%;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  color: var(--icon-normal-color);
 }
 
 .clients-link:hover,
@@ -717,13 +762,8 @@ background-position: 50% 50%;
 
 .clients-icon {
   width: 106px;
-  height: 60px;
-  margin: 16px 27px;
-  fill: var(--icon-normal-color);
-}
-.clients-icon:hover,
-.clients-icon:focus {
-  fill: var(--accent-btn-collor);
+  height: 60px; 
+  fill: currentColor;
 }
 
 /* ----------------------------------------------------------------------------------------
@@ -775,10 +815,11 @@ background-position: 50% 50%;
 
 .portfolio-list > .item a {
   text-decoration: none;
+  display: block;
 }
 
-.portfolio-list > .item:hover,
-.portfolio-list > .item:focus {
+.link:hover,
+.link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }

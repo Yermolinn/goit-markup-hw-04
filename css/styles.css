@@ -230,8 +230,8 @@ fill: currentColor;
 /* ------------------------------------------------Лого------------------------------------------------ */
 .logo {
   display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  margin-top: 24px;
+  margin-bottom: 25px;
 
   text-decoration: none;
   font-family: 'Raleway';

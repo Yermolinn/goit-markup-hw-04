@@ -162,6 +162,7 @@ background-position: 50% 50%;
   display: flex;
   color: var(--secondary-text-collor);
   text-decoration: none;
+  align-items: center;
 
   font-weight: 500;
   font-size: 14px;
@@ -176,7 +177,6 @@ background-position: 50% 50%;
   color: var(--accent-text-collor);
 }
 
-
 .header-phone-item {
   display: flex;
   margin-left: 50px;
@@ -190,7 +190,7 @@ background-position: 50% 50%;
   width: 16px;
   height: 12px;
   margin-right: 10px;
-fill: currentColor;
+  fill: currentColor;
 }
 
 .mail-icon .mail:hover {
@@ -201,7 +201,7 @@ fill: currentColor;
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: currentColor
+  fill: currentColor;
 }
 
 .header-phone-item:hover .phone-icon,
@@ -364,7 +364,6 @@ fill: currentColor;
 }
 
 .footer-smm-title {
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -513,15 +512,15 @@ fill: currentColor;
   background-color: var(--footer-bgc-collor);
   padding: 200px 0;
 
-    max-width: 1600px;
-      height: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-container {
@@ -585,16 +584,16 @@ fill: currentColor;
 
 .feat-icon-box {
   display: flex;
-margin-bottom: 30px;
+  margin-bottom: 30px;
   width: 270px;
   height: 120px;
- align-items: center;
- justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: var(--sec-bgc-color);
 }
 
 .feat-icon {
-height: 70px;
+  height: 70px;
   width: 70px;
 }
 
@@ -726,7 +725,6 @@ height: 70px;
   color: var(--white-bgc-collor);
 }
 
-
 /* ----------------------Постійні клієнти---------------------- */
 .clients-title {
   margin-bottom: 50px;
@@ -755,14 +753,9 @@ height: 70px;
   color: var(--accent-btn-collor);
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: var(--accent-btn-collor);
-}
-
 .clients-icon {
   width: 106px;
-  height: 60px; 
+  height: 60px;
   fill: currentColor;
 }
 
@@ -816,10 +809,11 @@ height: 70px;
 .portfolio-list > .item a {
   text-decoration: none;
   display: block;
+  align-items: center;
 }
 
-.link:hover,
-.link:focus {
+.portfolio-list > .item a:hover,
+.portfolio-list > .item a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
